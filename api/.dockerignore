@@ -1,0 +1,5 @@
+node_modules
+
+
+# ignore everything with.md format
+*.md
