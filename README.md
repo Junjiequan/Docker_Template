@@ -20,8 +20,10 @@ Run Docker container with Image name or ID:<br>
 `--name myapp_c` < is optional
 
 Run Docker container with Mapped port on Localhost:<br>
-`docker run --name myapp_c -p 4000:4000 -d myapp`<br>
--d detach
+`docker run --name container1 -p 4000:4000 -d --rm -v D:\Git\Docker_Template\api:/app -v /app/node_modules myapp:nodemon` <br>
+-d detach > optional<br>
+-v volumn<br>
+--rm remove after stop<br>
 
 Check Docker process:<br>
 `docker ps`
@@ -34,3 +36,12 @@ List stopped containers:<br>
 
 Start Container:<br>
 `docker start -i <name/id>`
+
+Docker Image remove:<br>
+`docker image rm myapp <-f>`
+
+Docker container remove:<br>
+`docker container rm myapp_c`
+
+Docker remove all container, images and volumes: <br>
+`docker system prune -a`

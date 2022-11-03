@@ -1,5 +1,8 @@
 FROM node:17-alpine
 
+#Self-explanatory
+RUN npm install -g nodemon
+
 #Create directory folder app
 WORKDIR /app
 
@@ -12,9 +15,9 @@ RUN npm install
 #First dot - current working directory # Second dot - Docker image
 COPY . .
 
-
 # Expose to specific port by the container - OPTIONAL
 EXPOSE 4000
 
 #Run command after docker container is created  - RUN TIME
-CMD ["node","app.js"]
+#Set dev script 
+CMD ["npm","run","dev"]
