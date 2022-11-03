@@ -9,10 +9,8 @@ COPY . .
 #Self-explanatory
 RUN npm install
 
-
-# port
+# Expose to specific port by the container - OPTIONAL
 EXPOSE 4000
 
-
-#Run command after docker container is created
+#Run command after docker container is created  - RUN TIME
 CMD ["node","app.js"]
