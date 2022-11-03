@@ -3,18 +3,18 @@ FROM node:17-alpine
 #Create directory folder app
 WORKDIR /app
 
-#First dot - current working directory # Second dot - Docker image
-COPY . .
+#Copy package json to prevent unnecessary npm install process by using cached data
+COPY package.json .
 
 #Self-explanatory
 RUN npm install
+
+#First dot - current working directory # Second dot - Docker image
+COPY . .
+
 
 # Expose to specific port by the container - OPTIONAL
 EXPOSE 4000
 
 #Run command after docker container is created  - RUN TIME
 CMD ["node","app.js"]
-
-
-
-#docker build -t myapp .
