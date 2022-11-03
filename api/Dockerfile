@@ -14,3 +14,7 @@ EXPOSE 4000
 
 #Run command after docker container is created  - RUN TIME
 CMD ["node","app.js"]
+
+
+
+#docker build -t myapp .
