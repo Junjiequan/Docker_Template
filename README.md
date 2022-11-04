@@ -21,8 +21,8 @@ Run Docker container with Image name or ID:<br>
 
 Run Docker container with Mapped port on Localhost:<br>
 `docker run --name container1 -p 4000:4000 -d --rm -v D:\Git\Docker_Template\api:/app -v /app/node_modules myapp:nodemon` <br>
--d detach > optional<br>
--v volumn<br>
+-d detach > optional : run container in the background?<br>
+-v volumn : virtual hard drives managed by Docker. Docker handles storing them on disk<br>
 --rm remove after stop<br>
 
 Check Docker process:<br>
@@ -45,3 +45,9 @@ Docker container remove:<br>
 
 Docker remove all container, images and volumes: <br>
 `docker system prune -a`
+
+## Docker compose YML
+
+Run Docker compose<br>
+`docker-compose up`<br>
+`docker-compose down <--rmi all -v>` <br>
