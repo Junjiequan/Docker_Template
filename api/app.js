@@ -9,11 +9,11 @@ app.get('/', (req, res) => {
   res.json([
     {
       id: 'gggggggggg',
-      title: 'First',
+      title: 'First title',
     },
     {
       id: 'fffffff',
-      title: 'Second',
+      title: 'Second titleeee',
     },
   ]);
 });

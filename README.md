@@ -49,5 +49,5 @@ Docker remove all container, images and volumes: <br>
 ## Docker compose YML
 
 Run Docker compose<br>
-`docker-compose up`<br>
-`docker-compose down <--rmi all -v>` <br>
+`docker compose up`<br>
+`docker compose down <--rmi all -v>` <br>

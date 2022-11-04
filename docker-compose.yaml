@@ -6,5 +6,15 @@ services:
     ports:
       - '4000:4000'
     volumes:
-      - ./api:/app
-      - /app/node_modules # Need to be absolute path
+      - ./api:/app_api
+      - /app_api/node_modules # Need to be absolute path
+  client:
+    build: ./client
+    container_name: client_c
+    ports:
+      - '3000:3000'
+    volumes:
+      - ./client:/app_client
+      - /app_client/node_modules 
+    stdin_open: true  # use stdin_open when you need to work on a project outside the Docker container
+    tty: true # use tty when you need to work on a project inside the Docker container

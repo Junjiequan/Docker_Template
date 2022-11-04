@@ -4,7 +4,7 @@ FROM node:17-alpine
 RUN npm install -g nodemon
 
 #Create directory folder app
-WORKDIR /app
+WORKDIR /app_api
 
 #Copy package json to prevent unnecessary npm install process by using cached data
 COPY package.json .
