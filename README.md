@@ -26,11 +26,8 @@ Utilize layer caching can reduce image build time
   --rm remove after stop<br>
 ```
 you can use -v option from cli, this facility is not available via Dockerfile
-
 docker run -t -i -v <host_dir>:<container_dir>  ubuntu /bin/bash
-
 where host_dir is the directory from host which you want to mount. you don't need to worry about directory of container if it doesn't exist docker will create it.
-
 If you do any changes in host_dir from host machine (under root privilege) it will be visible to container and vice versa.
 ```
 
