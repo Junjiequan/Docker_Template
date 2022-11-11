@@ -1,5 +1,7 @@
 FROM node:17-alpine
 
+
+## To create & set a container dir for bind mounts?
 WORKDIR /app_client
 
 COPY package.json .
