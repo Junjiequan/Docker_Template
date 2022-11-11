@@ -3,7 +3,7 @@ FROM node:17-alpine
 #Self-explanatory
 RUN npm install -g nodemon
 
-#Create directory folder app
+## To create & set a container dir for bind mounts?
 WORKDIR /app_api
 
 #Copy package json to prevent unnecessary npm install process by using cached data
