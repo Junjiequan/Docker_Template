@@ -20,7 +20,7 @@ Utilize layer caching can reduce image build time
   `--name myapp_c` < is optional
 
 - Run Docker container with Mapped port on Localhost:<br>
-  `docker run --name container1 -p 4000:4000 -d --rm -v D:\Git\Docker_Template\api:/app -v /app/node_modules myapp:nodemon` <br>
+  `docker run --name container1 -p 4000:4000 -d --rm -v "$(pwd):/app" -v /app/node_modules myapp:nodemon` <br>
   -d detach > optional : run container in the background?<br>
   -v volumn : virtual hard drives managed by Docker. Docker handles storing them on disk<br>
   --rm remove after stop<br>
